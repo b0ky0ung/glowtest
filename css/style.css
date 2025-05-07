@@ -178,4 +178,25 @@ body, html {
     background-color: #ffcccc;
     cursor: pointer;
   }
+  .button_wrap {
+    display: flex;
+    flex-direction: column;    /* 세로로 정렬 */
+    gap: 16px;                 /* 버튼 사이 여백 */
+    margin-top: 24px;
+  }
+  
+  .button_wrap button {
+    font-size: 16px;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    background-color: #000;    /* 검정색 배경 */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .button_wrap button:hover {
+    background-color: #444;    /* 호버 효과 */
+  }
   
