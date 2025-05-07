@@ -32,4 +32,4 @@ const monkeyData = {
       }
     ]
   }
-  
+  window.monkeyData = monkeyData;
