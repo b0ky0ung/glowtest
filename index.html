@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <script src="./js/common.js"></script>
+
+        <script src="./js/common.js"></script>
+    </head>
+    <body>
+     <div class="view_container">
+            <div class="content_wrap">
+              <div class="title">문해력테스트</div>
+              <div class="emoji_row">🐱🐶🦊🐯🦁🐷🐵🐰🐼🐻</div>
+              <div class="description">당신은 진짜 사람일까요?</div>
+              <ul class="information">
+                <li><span>총 문항 : 10문항 </span> 
+                    <span id="question_length"></span>
+                </li>
+                <li>
+                    <span>소요시간 : 5분</span> 
+                    <span id="time"></span>
+                </li>
+              </ul>
+            </div>
+            <div class="button_wrap">
+              <button type="button" class="start_btn">시작하기</button>
+            </div>
+          </div>
+          
+
+        <script>
+            fetch('./src/likeAnimal.json')
+            .then((response) => response.json())
+            .then((data) => new TestPage(data))
+        </script>
+    </body>
+</html>
+<script src="./js/common.js"></script>
+<script>
+  fetch('./src/likeAnimal.json')
+    .then(response => response.json())
+    .then(data => new TestPage(data));
+</script>
+
