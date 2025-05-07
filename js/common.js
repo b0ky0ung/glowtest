@@ -7,6 +7,8 @@ class TestPage {
         this.current = 0; // 현재 진행중인 문제 번호
         this.question = data.data;
         this.result = data.result;
+        this.type = data.type; // ← 이 줄을 constructor에 추가!
+
         
         if(data.type === 'point') this.point = 0;
         
