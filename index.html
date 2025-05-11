@@ -9,29 +9,34 @@
 </head>
 <body>
   <div class="view_container">
-    <div class="content_wrap">
-      <div class="title">문해력테스트</div>
-      <div class="emoji_row">🐱🐶🦊🐯🦁🐷🐵🐰🐼🐻</div>
-      <div class="description">당신은 진짜 사람일까요?</div>
-      <ul class="information">
-        <li>
-          <span>총 문항 : 10문항</span>
-          <span id="question_length"></span>
-        </li>
-        <li>
-          <span>소요시간 : 5분</span>
-          <span id="time"></span>
-        </li>
-      </ul>
+   <!-- 기존 .description은 제거 또는 의미 부여 -->
+<div class="intro">
+    <div class="title">문해력테스트</div>
+    <div class="emoji_row">🐱🐶🦊🐯🦁🐷🐵🐰🐼🐻</div>
+    <div class="intro_text">당신은 진짜 사람일까요?</div>
+    <ul class="information">
+      <li>
+        <span>총 문항 : 10문항</span> 
+        <span id="question_length"></span>
+      </li>
+      <li>
+        <span>소요시간 : 5분</span> 
+        <span id="time"></span>
+      </li>
+    </ul>
+  </div>
+        
     </div>
     <div class="button_wrap">
       <button type="button" class="start_btn">시작하기</button>
     </div>
   </div>
 
-  <div id="question-container">
+<!-- 문제 영역 (질문, 지문) -->
+<div id="question-container" style="display: none;">
     <div id="passage" class="passage"></div>
     <div id="question" class="question"></div>
+    <div class="button_wrap"></div>
   </div>
   
   <!-- 스크립트는 body 맨 아래에 한 번만! -->

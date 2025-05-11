@@ -27,14 +27,21 @@ class TestPage {
   }
 
   start() {
-    document.querySelector('.information').style.display = 'none';
-    document.querySelector('.title').innerHTML = `Q${this.current + 1}.`;
+    
+      // 기존 정보 숨기기
+      document.querySelector('.information').style.display = 'none';
+      document.querySelector('.intro').style.display = 'none';
+    
+      // 문제 영역 표시
+      document.querySelector('#question-container').style.display = 'block';
+    
+      // 질문/지문 출력
+      document.querySelector('.title').innerHTML = `Q${this.current + 1}.`;
+      document.querySelector('#passage').innerHTML = this.question[this.current].passage || '';
+      document.querySelector('#question').innerHTML = this.question[this.current].question;
+    
 
-    // ✅ 지문과 질문 출력
-    document.querySelector('#passage').innerHTML = this.question[this.current].passage || '';
-    document.querySelector('#question').innerHTML = this.question[this.current].question;
-
-    document.querySelector('.button_wrap').innerHTML = '';
+     document.querySelector('.button_wrap').innerHTML = '';
 
     const options = this.question[this.current].options;
     for (let i = 0; i < options.length; i++) {
