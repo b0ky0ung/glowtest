@@ -107,7 +107,8 @@ class TestPage {
           </a>
         </div>
 
-        <button onclick="location.reload()">다시하기</button>
+        <button class="retry-btn" onclick="location.reload()">다시하기</button>
+
       </div>
     `;
   }
