@@ -29,15 +29,18 @@ class TestPage {
     start() {
       document.querySelector('.information').style.display = 'none';
       document.querySelector('.title').innerHTML = `Q${this.current + 1}.`;
+  
+      // ✅ 지문 출력 추가
+      document.querySelector('#passage').innerHTML = this.question[this.current].passage || '';
+  
       document.querySelector('.description').innerHTML = this.question[this.current].question;
       document.querySelector('.button_wrap').innerHTML = '';
   
       const options = this.question[this.current].options;
       for (let i = 0; i < options.length; i++) {
         const button = document.createElement('button');
-        button.className = 'option_btn';  // ✅ class 추가!
+        button.className = 'option_btn';
         button.innerHTML = options[i].text;
-
   
         button.addEventListener('click', () => {
           if (this.type === "point") {
@@ -58,12 +61,17 @@ class TestPage {
   
       this.current++;
       document.querySelector('.title').innerHTML = `Q${this.current + 1}.`;
+  
+      // ✅ 지문 출력 추가
+      document.querySelector('#passage').innerHTML = this.question[this.current].passage || '';
+  
       document.querySelector('.description').innerHTML = this.question[this.current].question;
       document.querySelector('.button_wrap').innerHTML = '';
   
       const options = this.question[this.current].options;
       for (let i = 0; i < options.length; i++) {
         const button = document.createElement('button');
+        button.className = 'option_btn';
         button.innerHTML = options[i].text;
   
         button.addEventListener('click', () => {

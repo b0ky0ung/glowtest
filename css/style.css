@@ -26,6 +26,14 @@ body, html {
     margin-bottom: 2rem;
     line-height: 1.6;
   }
+
+  .passage {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #444;
+    line-height: 1.5;
+  }
+  
   
   /* 보기 버튼 */
   .option-button {
