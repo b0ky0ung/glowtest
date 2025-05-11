@@ -139,15 +139,15 @@ body, html {
     margin: 1.5rem 0;
   }
   
-  /* 유튜브 버튼 (빨간색) */
+  /* 유튜브 버튼 (#bd1d1d) */
   .link-btn.youtube {
-    background-color: #FF0000;
+    background-color: #bd1d1d;
   }
   .link-btn.youtube:hover {
-    background-color: #cc0000;
+    background-color: #a31818;
   }
   
-  /* 웹사이트 버튼 (초록색) */
+  /* 웹사이트 버튼 (#2C7336) */
   .link-btn.website {
     background-color: #2C7336;
   }
