@@ -84,6 +84,36 @@ body, html {
     margin-bottom: 2rem;
   }
 
+  .detail {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  .link-buttons {
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+  }
+  
+  .link-btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .link-btn:hover {
+    background-color: #222;
+  }
+  
   .view_container {
     min-height: 100vh;
     display: flex;
