@@ -44,6 +44,13 @@ body, html {
     gap: 0.5rem;
     margin-bottom: 0.5rem;
   }
+  .intro_text {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    white-space: pre-line;
+  }
   
   /* 질문 및 지문 */
   .passage {
@@ -60,7 +67,7 @@ body, html {
     text-align: center;
   }
   
-  /* 버튼 공통 스타일 */
+  /* 버튼 영역 공통 */
   .button_wrap {
     display: flex;
     flex-direction: column;
@@ -68,15 +75,24 @@ body, html {
     gap: 1rem;
     margin-top: 2rem;
   }
+  .options_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  /* 버튼 스타일 공통 */
   .button_wrap button,
   .option_btn,
   .link-btn,
   .retry-btn,
   .start_btn {
     font-size: 1rem;
-    padding: 1rem 2rem;
+    padding: 0.7rem 1.2rem;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
     background-color: #111;
     color: white;
@@ -85,6 +101,7 @@ body, html {
     max-width: 400px;
     text-align: center;
   }
+  
   .button_wrap button:hover,
   .option_btn:hover,
   .link-btn:hover,
@@ -93,7 +110,7 @@ body, html {
     background-color: #333;
   }
   
-  /* 보기 버튼 */
+  /* 보기 버튼 전용 스타일 */
   .option_btn {
     background-color: #ffe2e2;
     color: #000;
@@ -122,6 +139,22 @@ body, html {
     margin: 1.5rem 0;
   }
   
+  /* 유튜브 버튼 (빨간색) */
+  .link-btn.youtube {
+    background-color: #FF0000;
+  }
+  .link-btn.youtube:hover {
+    background-color: #cc0000;
+  }
+  
+  /* 웹사이트 버튼 (초록색) */
+  .link-btn.website {
+    background-color: #2C7336;
+  }
+  .link-btn.website:hover {
+    background-color: #245e2c;
+  }
+  
   /* 진행 바 */
   .progress-bar {
     width: 100%;
@@ -137,23 +170,10 @@ body, html {
     width: 0%;
     transition: width 0.3s ease;
   }
-  .intro_text {
-    font-size: 1.1rem;
-    color: #444;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-    white-space: pre-line;
-  }
-
+  
+  /* 인트로 텍스트 내 문항 수/시간은 기본 숨김 */
   #question_length,
   #time {
-  display: none;
-}
-.options_wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 2rem;
+    display: none;
   }
   

@@ -100,13 +100,14 @@ class TestPage {
         <p class="detail">${result.detail || ''}</p>
 
         <div class="link-buttons">
-          <a href="https://glelow.imweb.me/main?preview_mode=1" target="_blank">
-            <button class="link-btn">glelow 웹사이트 가기</button>
-          </a>
-          <a href="https://www.youtube.com/channel/UCeL9JtKX8IwYerToSQ9Qraw?app=desktop" target="_blank">
-            <button class="link-btn">YouTube 채널 보기</button>
-          </a>
+        <a href="https://glelow.imweb.me/main?preview_mode=1" target="_blank">
+        <button class="link-btn website">glelow 웹사이트 가기</button>
+        </a>
+        <a href="https://www.youtube.com/channel/UCeL9JtKX8IwYerToSQ9Qraw?app=desktop" target="_blank">
+        <button class="link-btn youtube">YouTube 채널 보기</button>
+        </a>
         </div>
+
 
         <button class="retry-btn" onclick="location.reload()">다시하기</button>
       </div>
