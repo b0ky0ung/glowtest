@@ -46,7 +46,9 @@ class TestPage {
       
     
 
-     document.querySelector('.button_wrap').innerHTML = '';
+      document.querySelector('.options_wrap').innerHTML = '';
+      document.querySelector('.options_wrap').appendChild(button);
+      
 
     const options = this.question[this.current].options;
     for (let i = 0; i < options.length; i++) {
@@ -79,7 +81,9 @@ class TestPage {
     document.querySelector('#passage').innerHTML = this.question[this.current].passage || '';
     
 
-    document.querySelector('.button_wrap').innerHTML = '';
+    document.querySelector('.options_wrap').innerHTML = '';
+    document.querySelector('.options_wrap').appendChild(button);
+
 
     const options = this.question[this.current].options;
     for (let i = 0; i < options.length; i++) {
