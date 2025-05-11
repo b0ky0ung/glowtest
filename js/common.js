@@ -46,8 +46,8 @@ class TestPage {
       
     
 
-      document.querySelector('.options_wrap').innerHTML = '';
-      document.querySelector('.options_wrap').appendChild(button);
+      document.querySelector('.options_btn').innerHTML = '';
+      document.querySelector('.options_btn').appendChild(button);
       
 
     const options = this.question[this.current].options;
@@ -81,8 +81,8 @@ class TestPage {
     document.querySelector('#passage').innerHTML = this.question[this.current].passage || '';
     
 
-    document.querySelector('.options_wrap').innerHTML = '';
-    document.querySelector('.options_wrap').appendChild(button);
+    document.querySelector('.options_btn').innerHTML = '';
+    document.querySelector('.options_btn').appendChild(button);
 
 
     const options = this.question[this.current].options;
