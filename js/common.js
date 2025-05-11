@@ -16,15 +16,19 @@ class TestPage {
 
   init() {
     document.querySelector('.title').innerHTML = this.title;
-    document.querySelector('#question').innerHTML = this.desc; // 👈 초기 질문 대신 description
+  
+    // ✅ 초기 설명은 .intro_text에 출력
+    document.querySelector('.intro_text').innerHTML = this.desc;
+  
     document.querySelector('#question_length').innerHTML = `${this.testLength}문항`;
-
+  
     const time = Math.trunc(this.testLength * 10 / 60);
     document.querySelector('#time').innerHTML = time > 0 ? `${time} ~ ${time * 2}분` : '1분 이내';
-
+  
     document.querySelector('.start_btn').innerHTML = this.startButton || '시작하기';
     document.querySelector('.start_btn').addEventListener('click', () => this.start());
   }
+  
 
   start() {
     
@@ -37,8 +41,9 @@ class TestPage {
     
       // 질문/지문 출력
       document.querySelector('.title').innerHTML = `Q${this.current + 1}.`;
-      document.querySelector('#passage').innerHTML = this.question[this.current].passage || '';
       document.querySelector('#question').innerHTML = this.question[this.current].question;
+      document.querySelector('#passage').innerHTML = this.question[this.current].passage || '';
+      
     
 
      document.querySelector('.button_wrap').innerHTML = '';
@@ -70,8 +75,9 @@ class TestPage {
     document.querySelector('.title').innerHTML = `Q${this.current + 1}.`;
 
     // ✅ 지문과 질문 출력
-    document.querySelector('#passage').innerHTML = this.question[this.current].passage || '';
     document.querySelector('#question').innerHTML = this.question[this.current].question;
+    document.querySelector('#passage').innerHTML = this.question[this.current].passage || '';
+    
 
     document.querySelector('.button_wrap').innerHTML = '';
 
