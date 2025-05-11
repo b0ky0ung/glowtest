@@ -144,4 +144,8 @@ body, html {
     line-height: 1.6;
     white-space: pre-line;
   }
-  
+
+  #question_length,
+  #time {
+  display: none;
+}
