@@ -87,6 +87,9 @@ class TestPage {
   }
 
   getResult() {
+     // 문제 영역 숨기기
+     document.querySelector('#question-container').style.display = 'none';
+
     const resultData = this.result.find(r =>
       this.point >= r.range[0] && this.point <= r.range[1]
     );
@@ -112,5 +115,6 @@ class TestPage {
         <button class="retry-btn" onclick="location.reload()">다시하기</button>
       </div>
     `;
+   
   }
 }
