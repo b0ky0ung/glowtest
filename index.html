@@ -6,46 +6,45 @@
   <title>동물 문해력 테스트</title>
   <link rel="stylesheet" href="./css/reset.css" />
   <link rel="stylesheet" href="./css/style.css" />
+  <!-- Pretendard 폰트 적용 (필요 시) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
 </head>
 <body>
   <div class="view_container">
-   <!-- 기존 .description은 제거 또는 의미 부여 -->
-<div class="intro">
-    <div class="title">문해력테스트</div>
-    <div class="emoji_row">🐱🐶🦊🐯🦁🐷🐵🐰🐼🐻</div>
-    <div class="intro_text">당신은 진짜 사람일까요?</div>
-    <ul class="information">
-      <li>
-        <span>총 문항 : 10문항</span> 
-        <span id="question_length"></span>
-      </li>
-      <li>
-        <span>소요시간 : 5분</span> 
-        <span id="time"></span>
-      </li>
-    </ul>
-     
-    <div class="button_wrap">
-      <button type="button" class="start_btn">시작하기</button>
+    <!-- 인트로 영역 -->
+    <div class="intro">
+      <div class="title">문해력테스트</div>
+      <div class="emoji_row">🐱🐶🦊🐯🦁🐷🐵🐰🐼🐻</div>
+      <div class="intro_text">당신은 진짜 사람일까요?</div>
+      <ul class="information">
+        <li>
+          <span>총 문항 : 10문항</span>
+          <span id="question_length"></span>
+        </li>
+        <li>
+          <span>소요시간 : 5분</span>
+          <span id="time"></span>
+        </li>
+      </ul>
+      <div class="button_wrap">
+        <button type="button" class="start_btn">시작하기</button>
+      </div>
     </div>
-   </div>
   </div>
 
-<!-- 문제 영역 -->
- <div id="question-container" style="display: none;">
-    <div id="question" class="question"></div>
-    <div id="passage" class="passage"></div>
-    <div class="options_wrap"></div>  <!-- ✅ 중복 제거 -->
+  <!-- 문제 영역 -->
+  <div id="question-container" style="display: none;">
+    <div class="title"></div> <!-- 질문 번호용 -->
+    <div id="question" class="question"></div> <!-- 질문 내용 -->
+    <div id="passage" class="passage"></div>   <!-- 지문 -->
+    <div class="options_wrap"></div>           <!-- 보기 버튼 -->
   </div>
-  
-  
-  <!-- 스크립트는 body 맨 아래에 한 번만! -->
-  <script src="./src/monkey.js"></script>    <!-- ① monkeyData 정의 -->
-  <script src="./js/common.js"></script>    <!-- ② TestPage 클래스 정의 -->
+
+  <!-- 스크립트 로딩 순서 주의 -->
+  <script src="./src/monkey.js"></script>   <!-- 데이터 -->
+  <script src="./js/common.js"></script>    <!-- 로직 -->
   <script>
-    new TestPage(window.monkeyData);        <!-- ③ 인스턴스 생성 -->
+    new TestPage(window.monkeyData);
   </script>
-  
+</body>
 </html>
-
-
